@@ -1,0 +1,41 @@
+a{
+    text-decoration: none;
+}
+
+#nav-bar{
+    margin: 0%;
+}
+
+#central{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+
+#texto_central{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 250%;
+}
+
+#produtos{
+    margin-top: 3%;
+}
+
+.card_custom{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.card-img-top{
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 14rem;
+    height: 14rem;
+}

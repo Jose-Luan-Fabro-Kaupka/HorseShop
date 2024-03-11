@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+}
+
+#nav-bar{
+    margin: 0%;
+}
+
+#pesquisa{
+    margin-right: 0;
+}
+
+#titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    width: 100%;
+    height: auto;
+}
+
+#texto_titulo{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 250%;
+}
+
+.card{
+    height: 22rem;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card-img-top{
+    width: 14rem;
+    height: 14rem;
+}

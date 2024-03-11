@@ -1,0 +1,133 @@
+#nav-bar{
+    margin: 0%;
+}
+
+#pagamento{
+    width: 75%;
+    min-height: 5px;
+    max-width: 700px;
+    padding: 45px 70px 45px 45px;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    position: relative;
+    font-size: 22px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+.container_carrinho {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    gap: 2%;
+}
+
+.produto {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 5%;
+    height: 450px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compra {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 5%;
+    height: 500px; 
+    grid-column: 2;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.imagem{
+    height: 70%;
+    width: 50%;
+}
+
+.remover{
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.finalizar{
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        align-self: center;
+}
+
+.finalizar:hover{
+    background-color: #45a049;
+}
+
+details {
+    width: 75%;
+    min-height: 5px;
+    max-width: 700px;
+    padding: 45px 70px 45px 45px;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    position: relative;
+    font-size: 22px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: all .3s;
+  }
+  
+details + details {
+    margin-top: 20px;
+}
+  
+details[open] {
+    min-height: 50px;
+    background-color: #8a8a8a;
+    box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+}
+  
+details p {
+    color: rgb(44, 44, 44);
+    font-weight: 300;
+}
+  
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+summary:focus {
+    outline: none;
+    
+}
+
+summary::-webkit-details-marker {
+    display: none
+}

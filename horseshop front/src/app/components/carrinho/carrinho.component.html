@@ -1,0 +1,75 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container" id="nav-bar">
+        <img src="../../../favicon.ico" width="5%" height=auto>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="botaoh">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/promocoes">Promoções</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/categorias">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/produtos">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/carrinho">Carrinho</a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline ml-auto">
+            <div class="input-group">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="inputp">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="submit" id="botaop">Pesquisar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+
+<div class="container_carrinho">
+    <div class="produtos">
+        <div class="produto" *ngFor="let produto of produtos; let i = index">
+            <img src="{{ produto.img }}" alt="{{ produto.nome }}" class="imagem">
+            <p>{{ produto.nome }}</p>
+            <p>Valor = R${{ produto.valor.toFixed(2) }} </p>
+            <p>Quantidade: {{ produto.quantidade }}</p>
+            <button class="remover" (click)="remover(desformatarNome(produto.nome))">Remover do carrinho</button>
+        </div>
+    </div>
+
+    <div class="compra">
+        <p id="pagamento">Valor Total: {{ calcularTotal().toFixed(2) }}</p>
+        <details>
+            <summary>
+                Escolher meio de pagamento
+                <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+                <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+            </summary>
+            <summary>
+                <p>Pix</p>
+            </summary>
+            <summary>
+                <p>Cartão</p>
+            </summary>
+            <summary>
+                <p>Boleto</p>
+            </summary>
+            </details>
+        <button class="finalizar">Finalizar compra</button>
+    </div>
+</div>
